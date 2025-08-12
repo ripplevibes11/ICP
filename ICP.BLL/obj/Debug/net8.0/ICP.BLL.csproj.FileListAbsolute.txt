@@ -1,0 +1,11 @@
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\bin\Debug\net8.0\ICP.BLL.deps.json
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\bin\Debug\net8.0\ICP.BLL.dll
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\bin\Debug\net8.0\ICP.BLL.pdb
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\obj\Debug\net8.0\ICP.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\obj\Debug\net8.0\ICP.BLL.AssemblyInfoInputs.cache
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\obj\Debug\net8.0\ICP.BLL.AssemblyInfo.cs
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\obj\Debug\net8.0\ICP.BLL.csproj.CoreCompileInputs.cache
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\obj\Debug\net8.0\ICP.BLL.dll
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\obj\Debug\net8.0\refint\ICP.BLL.dll
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\obj\Debug\net8.0\ICP.BLL.pdb
+D:\My Data\Fasihullah\D Drive Data\fasi\Notes\Special Notes\Projects\ICP Smart Services\ICP\ICP.BLL\obj\Debug\net8.0\ref\ICP.BLL.dll

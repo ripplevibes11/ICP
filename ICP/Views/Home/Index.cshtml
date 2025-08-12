@@ -1,0 +1,392 @@
+﻿@{
+    ViewData["Title"] = "ICP Smart Services";
+    Layout = "~/Views/Shared/_ICPLayout.cshtml";
+}
+
+<style>
+
+    #section1 {
+        background-position: left top;
+        background-blend-mode: overlay;
+        background-image: linear-gradient(180deg, #f5f0da 0%, #c9ece3 100%), url(https://icp-uaeservices.com/wp-content/uploads/2024/12/landing-carousel-1.png) !important;
+        height: auto;
+        padding: 50px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    #pranInput {
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #eee;
+    }
+
+    #inquiryBtn {
+        background-color: #CCCCCC;
+        color: white;
+    }
+
+    #GoldenServicesCard {
+        min-height: 170px;
+        border-radius: 6px;
+        border-bottom: 20px solid #BC9C73;
+    }
+
+    #goldenService {
+        font-weight: 700;
+        font-size: 30px;
+        color: #BC9C73 !important;
+        line-height: 1.2em;
+    }
+
+    #goldenServicesPara {
+        font-weight: 300;
+        line-height: 1.71em;
+        font-size: 21px;
+    }
+
+    /* Mobile adjustments */
+    @@media (max-width: 767px) {
+        #goldenService,
+        #goldenServicesPara,
+        #clickHereDiv {
+            text-align: center !important;
+        }
+
+        #section1 {
+            height: auto;
+            padding: 30px 15px;
+        }
+
+        #GoldenServicesCard {
+            min-height: auto;
+        }
+
+        #hiddenSection {
+            display: block;
+        }
+    }
+
+    #section2 {
+        background-color: #FBFBFB;
+    }
+
+
+    .service-title {
+        color: #BC9C73;
+    }
+
+    .btn-service {
+        background-color: #BC9C73;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+    }
+
+        .btn-service:hover,
+        .btn-service:focus,
+        .btn-service:active {
+            background-color: #BC9C73 !important;
+            color: #fff !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+    .device-card {
+        position: relative;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .device-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+    .device-label {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        color: white;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .device-number {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    .device-title {
+        font-size: 1.1rem;
+    }
+
+    .service-card {
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .card-image {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-title {
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #BC9C73;
+    }
+
+    .card-text {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    #hiddenSection{
+        background-color: #B79A6D;
+    }
+
+</style>
+
+
+<section id="hiddenSection" style="display:none;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-white">Download Smart Services Mobile Appllication</h3>
+            </div>
+            <div class="col-12">
+                <div class="d-flex justify-content-between mt-3">
+                    <a href="https://apps.apple.com" target="_blank">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                             alt="Download on the App Store" width="100">
+                    </a>
+                    <a href="https://play.google.com" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                             alt="Get it on Google Play" width="110">
+                    </a>
+                    <a href="https://appgallery.huawei.com" target="_blank">
+                        <img src="/images/aapGalary.png"
+                             alt="Explore it on AppGallery" width="110">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section1">
+    <div class="container h-100 d-flex flex-column justify-content-center">
+        <!-- First Row -->
+        <div class="row align-items-center" style="min-height: 300px;">
+            <!-- Left Column -->
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center pt-5 text-md-start text-center">
+                <h3 id="goldenService">Golden Services</h3>
+                <p id="goldenServicesPara">for Federal Authority For Identity, Citizenship, Customs & Port Security</p>
+                <div id="clickHereDiv">
+                    <a href="javascript:void(0)" class="bg-white btn rounded-pill px-4">Click here</a>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <img src="https://e.icpsmartservicesuae.com/img/wp-content/uploads/2024/12/Main-image.png"
+                     alt="devices image" class="img-fluid" style="max-width: 90%; height: auto;">
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row pb-5">
+            <div class="col-12">
+                <div class="card" id="GoldenServicesCard">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="row w-100 g-3">
+                            <div class="col-12 col-md-3 text-center textClr mb-md-0">
+                                <p>Quick Search</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input type="text" placeholder="Request Number / PRAN / Id Number" class="form-control" id="pranInput" />
+                            </div>
+                            <div class="col-12 col-md-3 text-md-end text-center">
+                                <a class="btn btn-sm text-white" href="javascript:void(0)" id="inquiryBtn">inquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section2">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <p class="fw-bold mb-0 ms-3"> Kindly note that registration in the Smart Services is available for the following categories: </p>
+                <ul>
+                    <li>Establishments</li>
+                    <li>Typing Centers</li>
+                    <li>Citizens of the United Arab Emirates and citizens of the Gulf Cooperation Council countries</li>
+                    <li>Residents of the United Arab Emirates and residents of the Gulf Cooperation Council countries</li>
+                    <li>Individuals under corporate sponsorship or the sponsorship of Excellencies the Sheikhs</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center py-3">
+
+            <!-- Column 1 -->
+            <div class="col-12 col-md-4">
+                <div class="card text-center h-100 border border-secondary rounded-3">
+                    <div class="card-body">
+                        <h3 class="service-title mb-3">Individual Services</h3>
+                        <button class="btn btn-service mb-2">Individuals Registration</button>
+                        <button class="btn btn-service mb-2">Forgot Username / Password</button>
+                        <div class="card d-flex flex-column justify-content-end" style="height: 150px;">
+                            <h5 class="service-title fw-bold">Public Services</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-12 col-md-4">
+                <div class="card text-center h-100 border border-secondary rounded-3">
+                    <div class="card-body">
+                        <h3 class="service-title mb-3">Individual Services</h3>
+                        <button class="btn btn-service mb-2">Establishments Registration</button>
+                        <button class="btn btn-service mb-2">Change Username</button>
+                        <div class="card d-flex flex-column justify-content-end" style="height: 150px;">
+                            <h5 class="service-title fw-bold">Golden Services</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-12 col-md-4">
+                <div class="card text-center h-100 border border-secondary rounded-3">
+                    <div class="card-body">
+                        <h3 class="service-title mb-3">Individual Services</h3>
+                        <button class="btn btn-service mb-2">Typing Centers Registration</button>
+                        <button class="btn btn-service mb-2">Change Username</button>
+                        <div class="card d-flex flex-column justify-content-end" style="height: 150px;">
+                            <h5 class="service-title fw-bold">Visa Services</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-5">
+            <div class="col-12 text-center">
+                <h3 class="textClr">Smart Services</h3>
+                <hr class="mb-4 mx-5" />
+            </div>
+
+            <!-- Card 01 - Citizens -->
+            <div class="col-md-6 col-lg-3">
+                <div class="device-card">
+                    <img src="https://e.icpsmartservicesuae.com/img/wp-content/uploads/2024/12/landing-img-1.png" alt="Citizens" class="img-fluid">
+                    <div class="device-label">
+                        <div class="device-number">01</div>
+                        <div class="device-title">Citizens</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 02 - UAE Residents -->
+            <div class="col-md-6 col-lg-3">
+                <div class="device-card">
+                    <img src="https://e.icpsmartservicesuae.com/img/wp-content/uploads/2024/12/landing-img-2.png" alt="UAE Residents" class="img-fluid">
+                    <div class="device-label">
+                        <div class="device-number">02</div>
+                        <div class="device-title">UAE Residents</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 03 - GCC Citizens -->
+            <div class="col-md-6 col-lg-3">
+                <div class="device-card">
+                    <img src="https://e.icpsmartservicesuae.com/img/wp-content/uploads/2024/12/landing-img-3.png" alt="GCC Citizens" class="img-fluid">
+                    <div class="device-label">
+                        <div class="device-number">03</div>
+                        <div class="device-title">GCC Citizens</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 04 - Visitors -->
+            <div class="col-md-6 col-lg-3">
+                <div class="device-card">
+                    <img src="https://e.icpsmartservicesuae.com/img/wp-content/uploads/2024/12/landing-img-4.png" alt="Visitors" class="img-fluid">
+                    <div class="device-label">
+                        <div class="device-number">04</div>
+                        <div class="device-title">Visitors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Open Data Card -->
+            <div class="col-md-4">
+                <div class="card service-card h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-4 btn-bg">
+                            @* <img src="https://via.placeholder.com/200x200?text=Open+Data" class="img-fluid card-image h-100" alt="Open Data"> *@
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-column h-100">
+                                <h5 class="card-title">Open Data</h5>
+                                <p class="card-text">Comprehensive and simple data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card -->
+            <div class="col-md-4">
+                <div class="card service-card h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-4 btn-bg">
+                            @* <img src="https://via.placeholder.com/200x200?text=Service+Card" class="img-fluid card-image h-100" alt="Service Card"> *@
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-column h-100">
+                                <h5 class="card-title">Service Card</h5>
+                                <p class="card-text">Knowledge database of provided services and its channels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Happiness Centers Card -->
+            <div class="col-md-4">
+                <div class="card service-card h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-4 btn-bg">
+                            @* <img src="https://via.placeholder.com/200x200?text=Happiness" class="img-fluid card-image h-100" alt="Customer Happiness"> *@
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-column h-100">
+                                <h5 class="card-title">Customer Happiness Centers</h5>
+                                <p class="card-text">Customer happiness centers map along the country.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

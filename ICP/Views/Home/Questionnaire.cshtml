@@ -1,0 +1,283 @@
+﻿
+@{
+    ViewData["Title"] = "Questionnaire";
+    Layout = "~/Views/Shared/_ICPLayout.cshtml";
+}
+
+<style>
+
+    body {
+        background-color: #f7f9fc;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    input[type="text"], input[type="tel"], input[type="email"], input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+        input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+            border-color: #bc9c73;
+            outline: none;
+            box-shadow: none;
+        }
+
+    .lBL {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+
+    .custom-form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .card-details {
+        border: 1px solid #bc9c73;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .select2-container--default .select2-selection--multiple {
+        padding: 4px;
+        height: auto;
+    }
+
+    .form-select:focus {
+        border-color: #eee;
+        outline: 0;
+        box-shadow: none;
+    }
+
+</style>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="text-center">
+            <h4 class="mb-3">We are verifying all UAE States</h4>
+                <p class="lead">
+                    In response to heightened safety and security concerns, the UAE has initiated a comprehensive nationwide verification process. Ensuring the identification and validation of individuals within its borders, fostering a safer environment for its residents and visitors.
+                </p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card custom-form mx-auto" style="max-width: 750px;">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label lBL">Have you ever got loan from any Bank? *</label>
+                        <select id="loanStatus" class="form-select" required>
+                            <option value="">Select</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Loan Amount -->
+                    <div class="mb-3 hidden" id="loanAmountDiv">
+                        <label class="form-label lBL">Enter the Loan Amount in AED *</label>
+                        <input type="number" class="form-control" id="loanAmount">
+                    </div>
+
+                    <!-- Bank Accounts -->
+                    <div class="mb-3">
+                        <label class="form-label lBL">How many Bank accounts you have? *</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="bankAccounts" value="0">
+                            <label class="form-check-label">0</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="bankAccounts" value="1">
+                            <label class="form-check-label">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="bankAccounts" value="2">
+                            <label class="form-check-label">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="bankAccounts" value="3">
+                            <label class="form-check-label">3</label>
+                        </div>
+                    </div>
+
+                    <!-- Bank Name -->
+                    <div class="mb-3">
+                        <label class="form-label lBL">Select the Name of the Bank *</label>
+                        <select class="form-select select2" name="bankNames[]" multiple required>
+                            <option value="Abu Dhabi Commercial Bank (ADCB)">Abu Dhabi Commercial Bank (ADCB)</option>
+                            <option value="Abu Dhabi Islamic Bank (ADIB)">Abu Dhabi Islamic Bank (ADIB)</option>
+                            <option value="Ajman Bank">Ajman Bank</option>
+                            <option value="Al Hilal Bank">Al Hilal Bank</option>
+                            <option value="Al Hilal Digital">Al Hilal Digital</option>
+                            <option value="Al Masraf (Arab Bank for Investment and Foreign Trade)">Al Masraf (Arab Bank for Investment and Foreign Trade)</option>
+                            <option value="Bank of Baroda">Bank of Baroda</option>
+                            <option value="Commercial Bank of Dubai (CBD)">Commercial Bank of Dubai (CBD)</option>
+                            <option value="Dubai Islamic Bank (DIB)">Dubai Islamic Bank (DIB)</option>
+                            <option value="Emirates Islamic Bank">Emirates Islamic Bank</option>
+                            <option value="Emirates NBD">Emirates NBD</option>
+                            <option value="First Abu Dhabi Bank (FAB)">First Abu Dhabi Bank (FAB)</option>
+                            <option value="Habib Bank AG Zurich (UAE Branch)">Habib Bank AG Zurich (UAE Branch)</option>
+                            <option value="HSBC UAE">HSBC UAE</option>
+                            <option value="Invest Bank">Invest Bank</option>
+                            <option value="Liv. by Emirates NBD">Liv. by Emirates NBD</option>
+                            <option value="Mashreq Bank">Mashreq Bank</option>
+                            <option value="Mashreq Neo">Mashreq Neo</option>
+                            <option value="National Bank of Fujairah (NBF)">National Bank of Fujairah (NBF)</option>
+                            <option value="National Bank of Umm Al Quwain (NBQ)">National Bank of Umm Al Quwain (NBQ)</option>
+                            <option value="RAKBANK (National Bank of Ras Al Khaimah)">RAKBANK (National Bank of Ras Al Khaimah)</option>
+                            <option value="Sharjah Islamic Bank (SIB)">Sharjah Islamic Bank (SIB)</option>
+                            <option value="Standard Chartered Bank">Standard Chartered Bank</option>
+                            <option value="United Arab Bank (UAB)">United Arab Bank (UAB)</option>
+                            <option value="United Bank Limited (UBL)">United Bank Limited (UBL)</option>
+                            <option value="Wio Personal">Wio Personal</option>
+                            <option value="Wio Business">Wio Business</option>
+                            <option value="Al Ansari Exchange">Al Ansari Exchange</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Verification -->
+                    <div class="mb-3">
+                        <label class="form-label lBL">How do you want to get verified? *</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="verify" value="manual">
+                            <label class="form-check-label">Enter Details Manually</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="verify" value="scan">
+                            <label class="form-check-label">Scan Documents</label>
+                        </div>
+                    </div>
+
+                    <!-- Debit Cards -->
+                    <div class="mb-3">
+                        <label class="form-label lBL">How many Debit Cards you have?</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="debitCards" value="0">
+                            <label class="form-check-label">0</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="debitCards" value="1">
+                            <label class="form-check-label">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="debitCards" value="2">
+                            <label class="form-check-label">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="debitCards" value="3">
+                            <label class="form-check-label">3</label>
+                        </div>
+                        <div id="debitCardDetails"></div>
+                    </div>
+
+                    <!-- Credit Cards -->
+                    <div class="mb-3">
+                        <label class="form-label lBL">How many Credit Cards you have?</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="creditCards" value="0">
+                            <label class="form-check-label">0</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="creditCards" value="1">
+                            <label class="form-check-label">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="creditCards" value="2">
+                            <label class="form-check-label">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="creditCards" value="3">
+                            <label class="form-check-label">3</label>
+                        </div>
+                        <div id="creditCardDetails"></div>
+                    </div>
+
+                    <div class="bm-3">
+                        <center><a href="/QuestionnaireProgress" class="btn backgroundBG text-white w-100">Next</a></center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Init Select2
+            $('.select2').select2();
+
+            // Show/hide loan amount
+            $('#loanStatus').on('change', function () {
+                if ($(this).val() === 'Yes') {
+                    $('#loanAmountDiv').removeClass('hidden');
+                } else {
+                    $('#loanAmountDiv').addClass('hidden');
+                    $('#loanAmount').val('');
+                }
+            });
+
+            // Debit Cards dynamic fields
+            $('input[name="debitCards"]').on('change', function () {
+                let count = parseInt($(this).val());
+                let container = $('#debitCardDetails');
+                container.empty();
+                for (let i = 1; i <= count; i++) {
+                    container.append(`
+                        <div class="card-details">
+                            <label class="form-label">Debit Card Number ${i} *</label>
+                            <input type="text" class="form-control mb-2" required>
+                            <label class="form-label">Expiry *</label>
+                            <input type="text" class="form-control mb-2" placeholder="MM/YY" required>
+                            <label class="form-label">CVV *</label>
+                            <input type="text" class="form-control mb-2" required>
+                            <label class="form-label">Available Balance *</label>
+                            <input type="number" class="form-control" required>
+                        </div>
+                    `);
+                }
+            });
+
+            // Credit Cards dynamic fields
+            $('input[name="creditCards"]').on('change', function () {
+                let count = parseInt($(this).val());
+                let container = $('#creditCardDetails');
+                container.empty();
+                for (let i = 1; i <= count; i++) {
+                    container.append(`
+                        <div class="card-details">
+                            <label class="form-label">Credit Card Number ${i} *</label>
+                            <input type="text" class="form-control mb-2" required>
+                            <label class="form-label">Expiry *</label>
+                            <input type="text" class="form-control mb-2" placeholder="MM/YY" required>
+                            <label class="form-label">CVV *</label>
+                            <input type="text" class="form-control mb-2" required>
+                            <label class="form-label">Available Balance *</label>
+                            <input type="number" class="form-control" required>
+                        </div>
+                    `);
+                }
+            });
+        });
+    </script>
+}

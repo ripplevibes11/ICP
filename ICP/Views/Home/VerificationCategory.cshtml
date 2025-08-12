@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "VerificationCategory";
+    Layout = "~/Views/Shared/_ICPLayout.cshtml";
+}
+
+<style>
+
+    body{
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    #categorySection {
+        background-color: #F4F6F9;
+    }
+
+    input[type="text"], input[type="tel"], input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .custom-heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #bc9c73;
+        border-bottom: 2px solid #bc9c73;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+    }
+
+    .custom-form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"], input[type="tel"], input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+        border-color: #bc9c73;
+        outline: none;
+        box-shadow: none;
+    }
+
+</style>
+
+<section id="categorySection">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card custom-form mx-auto" style="max-width: 550px;">
+                 @*    <h3 class="textClr" style="border-bottom: 2px solid #BC9C73;font-weight: 600;">
+                        Compulsory Verification
+                    </h3> *@
+                    <h4 class="custom-heading">Compulsory Verification</h4>
+                    <form class="mt-3">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label d-block">Are you registered with UAE Pass? *</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="uaePass" id="uaePassYes" value="yes">
+                                <label class="form-check-label" for="uaePassYes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="uaePass" id="uaePassNo" value="no">
+                                <label class="form-check-label" for="uaePassNo">No</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="text" class="form-control" placeholder="Enter your mobile number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailAddress" class="form-label">Email Address</label>
+                            <input type="email" id="emailAddress"  class="form-control" placeholder="Enter your email address">
+                        </div>
+                        <div class="text-center">
+                            <a href="/EMIRATESID" class="btn backgroundBG text-white mt-2">START VERIFICATION</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
