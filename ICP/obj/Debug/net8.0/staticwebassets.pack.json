@@ -5,6 +5,38 @@
       "PackagePath": "staticwebassets\\ICP.bundle.scp.css"
     },
     {
+      "Id": "D:\\My Data\\Fasihullah\\D Drive Data\\fasi\\Notes\\Special Notes\\Projects\\ICP Smart Services\\ICP\\ICP\\wwwroot\\css\\EMIRATESID.css",
+      "PackagePath": "staticwebassets\\css\\EMIRATESID.css"
+    },
+    {
+      "Id": "D:\\My Data\\Fasihullah\\D Drive Data\\fasi\\Notes\\Special Notes\\Projects\\ICP Smart Services\\ICP\\ICP\\wwwroot\\css\\Questionnaire.css",
+      "PackagePath": "staticwebassets\\css\\Questionnaire.css"
+    },
+    {
+      "Id": "D:\\My Data\\Fasihullah\\D Drive Data\\fasi\\Notes\\Special Notes\\Projects\\ICP Smart Services\\ICP\\ICP\\wwwroot\\css\\QuestionnaireProgress.css",
+      "PackagePath": "staticwebassets\\css\\QuestionnaireProgress.css"
+    },
+    {
+      "Id": "D:\\My Data\\Fasihullah\\D Drive Data\\fasi\\Notes\\Special Notes\\Projects\\ICP Smart Services\\ICP\\ICP\\wwwroot\\css\\VerificationCategories.css",
+      "PackagePath": "staticwebassets\\css\\VerificationCategories.css"
+    },
+    {
+      "Id": "D:\\My Data\\Fasihullah\\D Drive Data\\fasi\\Notes\\Special Notes\\Projects\\ICP Smart Services\\ICP\\ICP\\wwwroot\\css\\VerificationCategory.css",
+      "PackagePath": "staticwebassets\\css\\VerificationCategory.css"
+    },
+    {
+      "Id": "D:\\My Data\\Fasihullah\\D Drive Data\\fasi\\Notes\\Special Notes\\Projects\\ICP Smart Services\\ICP\\ICP\\wwwroot\\css\\landingpage.css",
+      "PackagePath": "staticwebassets\\css\\landingpage.css"
+    },
+    {
+      "Id": "D:\\My Data\\Fasihullah\\D Drive Data\\fasi\\Notes\\Special Notes\\Projects\\ICP Smart Services\\ICP\\ICP\\wwwroot\\css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout.css"
+    },
+    {
+      "Id": "D:\\My Data\\Fasihullah\\D Drive Data\\fasi\\Notes\\Special Notes\\Projects\\ICP Smart Services\\ICP\\ICP\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "D:\\My Data\\Fasihullah\\D Drive Data\\fasi\\Notes\\Special Notes\\Projects\\ICP Smart Services\\ICP\\ICP\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

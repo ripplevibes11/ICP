@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ICP.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15b0cdc63c1161a4557dd9ea3072c351442c3eee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39bede64bbb719f2294a468e132b5a502e5c95a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ICP.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ICP.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

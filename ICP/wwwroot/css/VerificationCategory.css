@@ -1,0 +1,54 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#categorySection {
+    background-color: #F4F6F9;
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.custom-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #bc9c73;
+    border-bottom: 2px solid #bc9c73;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+
+.custom-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+    input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+        border-color: #bc9c73;
+        outline: none;
+        box-shadow: none;
+    }

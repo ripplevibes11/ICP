@@ -1,0 +1,145 @@
+#section1 {
+    background-position: left top;
+    background-blend-mode: overlay;
+    background-image: linear-gradient(180deg, #f5f0da 0%, #c9ece3 100%), url(https://icp-uaeservices.com/wp-content/uploads/2024/12/landing-carousel-1.png) !important;
+    height: auto;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+}
+
+#pranInput {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #eee;
+}
+
+#inquiryBtn {
+    background-color: #CCCCCC;
+    color: white;
+}
+
+#GoldenServicesCard {
+    min-height: 170px;
+    border-radius: 6px;
+    border-bottom: 20px solid #BC9C73;
+}
+
+#goldenService {
+    font-weight: 700;
+    font-size: 30px;
+    color: #BC9C73 !important;
+    line-height: 1.2em;
+}
+
+#goldenServicesPara {
+    font-weight: 300;
+    line-height: 1.71em;
+    font-size: 21px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    #goldenService,
+    #goldenServicesPara,
+    #clickHereDiv {
+        text-align: center !important;
+    }
+
+    #section1 {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    #GoldenServicesCard {
+        min-height: auto;
+    }
+
+    #hiddenSection {
+        display: block;
+    }
+}
+
+#section2 {
+    background-color: #FBFBFB;
+}
+
+
+.service-title {
+    color: #BC9C73;
+}
+
+.btn-service {
+    background-color: #BC9C73;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+    .btn-service:hover,
+    .btn-service:focus,
+    .btn-service:active {
+        background-color: #BC9C73 !important;
+        color: #fff !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+.device-card {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .device-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+.device-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.device-number {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.device-title {
+    font-size: 1.1rem;
+}
+
+.service-card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-image {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #BC9C73;
+}
+
+.card-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#hiddenSection {
+    background-color: #B79A6D;
+}
