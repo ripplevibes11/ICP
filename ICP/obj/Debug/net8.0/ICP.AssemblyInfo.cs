@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ICP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02d9d548307ed2a997370a381e5004ca968d123d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15b0cdc63c1161a4557dd9ea3072c351442c3eee")]
 [assembly: System.Reflection.AssemblyProductAttribute("ICP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ICP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,16 @@
+using ICP.BLL.Services.UserDetail;
+using ICP.DAL.Entities;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+builder.Services.AddDbContext<MainContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IUserDetailService, UserDetailService>();
 
 var app = builder.Build();
 

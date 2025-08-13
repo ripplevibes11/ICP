@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ICP.DAL\ICP.DAL.csproj" />
+    <ProjectReference Include="..\ICP.Utilities\ICP.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\UserDetail\DTOs\" />
+  </ItemGroup>
+
 </Project>
